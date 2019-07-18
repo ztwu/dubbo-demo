@@ -1,226 +1,234 @@
-2019-06-12 11:20:16 ContextLoader.java INFO Root WebApplicationContext: initialization started
-2019-06-12 11:20:16 AbstractApplicationContext.java INFO Refreshing Root WebApplicationContext: startup date [Wed Jun 12 11:20:16 CST 2019]; root of context hierarchy
-2019-06-12 11:20:16 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [app-context.xml]
-2019-06-12 11:20:16 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [dubbo-consumer.xml]
-2019-06-12 11:20:16 ? INFO using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
-2019-06-12 11:20:17 AutowiredAnnotationBeanPostProcessor.java INFO JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2019-06-12 11:20:17 AbstractApplicationContext.java WARN Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
-2019-06-12 11:20:17 ContextLoader.java ERROR Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:223)
-	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:702)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:527)
-	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:443)
-	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:325)
-	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
-	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:835)
-	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:534)
-	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:808)
-	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:346)
-	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1379)
-	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:323)
-	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1341)
-	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:772)
-	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:263)
-	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:517)
-	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:398)
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
-	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:161)
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
-	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
-	at org.eclipse.jetty.server.Server.start(Server.java:405)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
-	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
-	at org.eclipse.jetty.server.Server.doStart(Server.java:372)
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:460)
-	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:328)
-	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:170)
-	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:154)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:146)
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
-	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
-	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
-	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:954)
-	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
-	at org.apache.maven.cli.MavenCli.main(MavenCli.java:192)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
-	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
-Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
-	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.<clinit>(ReflectiveAspectJAdvisorFactory.java:77)
-	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.initBeanFactory(AnnotationAwareAspectJAutoProxyCreator.java:78)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.setBeanFactory(AbstractAdvisorAutoProxyCreator.java:60)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1647)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1615)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
-	... 64 more
-Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Around
-	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
-	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
-	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
-	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
-	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:487)
-	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:428)
-	... 70 more
-2019-06-12 11:21:21 ContextLoader.java INFO Root WebApplicationContext: initialization started
-2019-06-12 11:21:21 AbstractApplicationContext.java INFO Refreshing Root WebApplicationContext: startup date [Wed Jun 12 11:21:21 CST 2019]; root of context hierarchy
-2019-06-12 11:21:21 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [app-context.xml]
-2019-06-12 11:21:22 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [dubbo-consumer.xml]
-2019-06-12 11:21:22 ? INFO using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
-2019-06-12 11:21:22 AutowiredAnnotationBeanPostProcessor.java INFO JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2019-06-12 11:21:23 ZkEventThread.java INFO Starting ZkClient event thread.
-2019-06-12 11:21:23 Environment.java INFO Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
-2019-06-12 11:21:23 Environment.java INFO Client environment:host.name=DESKTOP-99JO1SO
-2019-06-12 11:21:23 Environment.java INFO Client environment:java.version=1.8.0_191
-2019-06-12 11:21:23 Environment.java INFO Client environment:java.vendor=Oracle Corporation
-2019-06-12 11:21:23 Environment.java INFO Client environment:java.home=D:\soft\jdk\jre
-2019-06-12 11:21:23 Environment.java INFO Client environment:java.class.path=D:\soft\packagetool\maven\apache-maven-3.5.4\boot\plexus-classworlds-2.5.2.jar;D:\soft\programmetool\idea\IntelliJ IDEA 2018.2.5\lib\idea_rt.jar
-2019-06-12 11:21:23 Environment.java INFO Client environment:java.library.path=D:\soft\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\soft\jdk\bin;D:\soft\packagetool\maven\apache-maven-3.5.4\bin;D:\soft\scala\bin;D:\soft\scala\bin;D:\soft\vcs\git\Git\cmd;D:\soft\vcs\svn\bin;D:\soft\python\python2;D:\soft\python\python3;D:\soft\python\python2\Scripts;D:\soft\python\python3\Scripts;D:\soft\packagetool\sbt\bin;D:\soft\hadoop\hadoop-common-2.6.0-bin-master\bin;D:\soft\packagetool\ant\apache-ant-1.10.5\bin;D:\soft\cmake\bin;D:\soft\zlib\zlib-1.2.8;%GRADLE_HOME%\bin;C:\Users\吴彰涛\AppData\Local\Microsoft\WindowsApps;;.
-2019-06-12 11:21:23 Environment.java INFO Client environment:java.io.tmpdir=C:\Users\吴彰涛\AppData\Local\Temp\
-2019-06-12 11:21:23 Environment.java INFO Client environment:java.compiler=<NA>
-2019-06-12 11:21:23 Environment.java INFO Client environment:os.name=Windows 10
-2019-06-12 11:21:23 Environment.java INFO Client environment:os.arch=amd64
-2019-06-12 11:21:23 Environment.java INFO Client environment:os.version=10.0
-2019-06-12 11:21:23 Environment.java INFO Client environment:user.name=吴彰涛
-2019-06-12 11:21:23 Environment.java INFO Client environment:user.home=C:\Users\吴彰涛
-2019-06-12 11:21:23 Environment.java INFO Client environment:user.dir=D:\data\idea\java\private\github-self-workspace\dubbo-demo\DubboConsumer
-2019-06-12 11:21:23 ZooKeeper.java INFO Initiating client connection, connectString=192.168.1.100:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@6ddc67d0
-2019-06-12 11:21:23 ClientCnxn.java INFO Opening socket connection to server /192.168.1.100:2181
-2019-06-12 11:21:23 ClientCnxn.java INFO Socket connection established to ubuntu2/192.168.1.100:2181, initiating session
-2019-06-12 11:21:23 ClientCnxn.java INFO Session establishment complete on server ubuntu2/192.168.1.100:2181, sessionid = 0x26b497626c80001, negotiated timeout = 30000
-2019-06-12 11:21:23 ZkClient.java INFO zookeeper state changed (SyncConnected)
-2019-06-12 11:21:23 AbstractRegistry.java INFO  [DUBBO] Register: consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=consumers&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900, dubbo version: 2.5.3, current host: 192.168.1.1
-2019-06-12 11:21:23 AbstractRegistry.java INFO  [DUBBO] Subscribe: consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900, dubbo version: 2.5.3, current host: 192.168.1.1
-2019-06-12 11:21:23 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900, urls: [empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900, empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=configurators&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900, empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900], dubbo version: 2.5.3, current host: 192.168.1.1
-2019-06-12 11:21:23 AbstractApplicationContext.java WARN Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helloApi': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consumerService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'providerService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.ztwu.dubbo.service.IProviderService. No provider available for the service com.ztwu.dubbo.service.IProviderService from the url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboConsumer&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900 to the consumer 192.168.1.1 use dubbo version 2.5.3
-2019-06-12 11:21:23 ContextLoader.java ERROR Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helloApi': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consumerService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'providerService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.ztwu.dubbo.service.IProviderService. No provider available for the service com.ztwu.dubbo.service.IProviderService from the url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboConsumer&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900 to the consumer 192.168.1.1 use dubbo version 2.5.3
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:321)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
-	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:443)
-	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:325)
-	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
-	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:835)
-	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:534)
-	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:808)
-	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:346)
-	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1379)
-	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:323)
-	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1341)
-	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:772)
-	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:263)
-	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:517)
-	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:398)
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
-	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:161)
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
-	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
-	at org.eclipse.jetty.server.Server.start(Server.java:405)
-	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
-	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
-	at org.eclipse.jetty.server.Server.doStart(Server.java:372)
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:460)
-	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:328)
-	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:170)
-	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:154)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:146)
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
-	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
-	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
-	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:954)
-	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
-	at org.apache.maven.cli.MavenCli.main(MavenCli.java:192)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
-	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consumerService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'providerService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.ztwu.dubbo.service.IProviderService. No provider available for the service com.ztwu.dubbo.service.IProviderService from the url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboConsumer&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900 to the consumer 192.168.1.1 use dubbo version 2.5.3
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:321)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:522)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:627)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318)
-	... 66 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'providerService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service com.ztwu.dubbo.service.IProviderService. No provider available for the service com.ztwu.dubbo.service.IProviderService from the url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboConsumer&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900 to the consumer 192.168.1.1 use dubbo version 2.5.3
-	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175)
-	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1634)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:522)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:627)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318)
-	... 79 more
-Caused by: java.lang.IllegalStateException: Failed to check the status of the service com.ztwu.dubbo.service.IProviderService. No provider available for the service com.ztwu.dubbo.service.IProviderService from the url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?application=dubboConsumer&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=11764&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1560309682900 to the consumer 192.168.1.1 use dubbo version 2.5.3
-	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:420)
-	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300)
-	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138)
-	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:65)
-	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168)
-	... 89 more
+2019-07-04 09:15:16 ContextLoader.java INFO Root WebApplicationContext: initialization started
+2019-07-04 09:15:16 AbstractApplicationContext.java INFO Refreshing Root WebApplicationContext: startup date [Thu Jul 04 09:15:16 CST 2019]; root of context hierarchy
+2019-07-04 09:15:16 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [app-context.xml]
+2019-07-04 09:15:17 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [dubbo-consumer.xml]
+2019-07-04 09:15:17 ? INFO using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2019-07-04 09:15:17 AutowiredAnnotationBeanPostProcessor.java INFO JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-04 09:15:17 AbstractRegistry.java INFO  [DUBBO] Load registry store file C:\Users\吴彰涛\.dubbo\dubbo-registry-192.168.1.100.cache, data: {com.ztwu.dubbo.service.IUserService=empty://192.168.1.1:20880/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&category=configurators&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=3732&retries=0&side=provider&timeout=120000&timestamp=1562202760900, com.ztwu.dubbo.service.IProviderService=empty://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&category=configurators&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=3732&retries=0&side=provider&timeout=120000&timestamp=1562202760087}, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-07-04 09:15:17 ZkEventThread.java INFO Starting ZkClient event thread.
+2019-07-04 09:15:17 Environment.java INFO Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+2019-07-04 09:15:17 Environment.java INFO Client environment:host.name=DESKTOP-99JO1SO
+2019-07-04 09:15:17 Environment.java INFO Client environment:java.version=1.8.0_191
+2019-07-04 09:15:17 Environment.java INFO Client environment:java.vendor=Oracle Corporation
+2019-07-04 09:15:17 Environment.java INFO Client environment:java.home=D:\soft\jdk\jre
+2019-07-04 09:15:17 Environment.java INFO Client environment:java.class.path=D:\soft\packagetool\maven\apache-maven-3.5.4\boot\plexus-classworlds-2.5.2.jar;D:\soft\programmetool\idea\IntelliJ IDEA 2018.2.5\lib\idea_rt.jar
+2019-07-04 09:15:17 Environment.java INFO Client environment:java.library.path=D:\soft\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\soft\jdk9\bin;D:\soft\packagetool\maven\apache-maven-3.5.4\bin;D:\soft\scala\bin;D:\soft\scala\bin;D:\soft\vcs\git\Git\cmd;D:\soft\vcs\svn\bin;D:\soft\python\python2;D:\soft\python\python3;D:\soft\python\python2\Scripts;D:\soft\python\python3\Scripts;D:\soft\packagetool\sbt2\bin;D:\soft\hadoop\hadoop-2.7.7\bin;D:\soft\packagetool\ant\apache-ant-1.10.5\bin;D:\soft\cmake\bin;D:\soft\zlib\zlib-1.2.8;D:\soft\packagetool\gradle\gradle-4.5-all\bin;D:\soft\thrift;D:\soft\mingw64\mingw64\bin;D:\soft\hadoop\hadoop-2.7.7\sbin;C:\Users\吴彰涛\AppData\Local\Microsoft\WindowsApps;;.
+2019-07-04 09:15:17 Environment.java INFO Client environment:java.io.tmpdir=C:\Users\吴彰涛\AppData\Local\Temp\
+2019-07-04 09:15:17 Environment.java INFO Client environment:java.compiler=<NA>
+2019-07-04 09:15:17 Environment.java INFO Client environment:os.name=Windows 10
+2019-07-04 09:15:17 Environment.java INFO Client environment:os.arch=amd64
+2019-07-04 09:15:17 Environment.java INFO Client environment:os.version=10.0
+2019-07-04 09:15:17 Environment.java INFO Client environment:user.name=吴彰涛
+2019-07-04 09:15:17 Environment.java INFO Client environment:user.home=C:\Users\吴彰涛
+2019-07-04 09:15:17 Environment.java INFO Client environment:user.dir=D:\data\idea\java\private\github-self-workspace\dubbo-demo\DubboConsumer
+2019-07-04 09:15:17 ZooKeeper.java INFO Initiating client connection, connectString=192.168.1.100:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@2b08f55a
+2019-07-04 09:15:17 ClientCnxn.java INFO Opening socket connection to server /192.168.1.100:2181
+2019-07-04 09:15:17 ClientCnxn.java INFO Socket connection established to ubuntu2/192.168.1.100:2181, initiating session
+2019-07-04 09:15:17 ClientCnxn.java INFO Session establishment complete on server ubuntu2/192.168.1.100:2181, sessionid = 0x26bba8028420004, negotiated timeout = 30000
+2019-07-04 09:15:17 ZkClient.java INFO zookeeper state changed (SyncConnected)
+2019-07-04 09:15:17 AbstractRegistry.java INFO  [DUBBO] Register: consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=consumers&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202917673, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:15:17 AbstractRegistry.java INFO  [DUBBO] Subscribe: consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202917673, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:15:17 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202917673, urls: [dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=3732&retries=0&side=provider&timeout=120000&timestamp=1562202760087, empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=configurators&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202917673, empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202917673], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:15:18 AbstractClient.java INFO  [DUBBO] Successed connect to server /192.168.1.1:20880 from NettyClient 192.168.1.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x4aa4bfa1, /192.168.1.1:51370 => /192.168.1.1:20880]], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:15:18 AbstractClient.java INFO  [DUBBO] Start NettyClient DESKTOP-99JO1SO/192.168.1.1 connect to the server /192.168.1.1:20880, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:15:18 ReferenceConfig.java INFO  [DUBBO] Refer dubbo service com.ztwu.dubbo.service.IProviderService from url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=dubboConsumer&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202917673, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:15:18 AbstractRegistry.java INFO  [DUBBO] Register: consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=consumers&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202918083, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:15:18 AbstractRegistry.java INFO  [DUBBO] Subscribe: consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202918083, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:15:18 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202918083, urls: [dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=3732&retries=0&side=provider&timeout=120000&timestamp=1562202760900, empty://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=configurators&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202918083, empty://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202918083], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:15:18 ReferenceConfig.java INFO  [DUBBO] Refer dubbo service com.ztwu.dubbo.service.IUserService from url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=dubboConsumer&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16004&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562202918083, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:15:18 AbstractHandlerMethodMapping.java INFO Mapped "{[/api],methods=[POST],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.ztwu.dubbo.controller.HelloApi.boy(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-04 09:15:18 RequestMappingHandlerAdapter.java INFO Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Jul 04 09:15:16 CST 2019]; root of context hierarchy
+2019-07-04 09:15:18 RequestMappingHandlerAdapter.java INFO Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Jul 04 09:15:16 CST 2019]; root of context hierarchy
+2019-07-04 09:15:18 AbstractUrlHandlerMapping.java INFO Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2019-07-04 09:15:18 ContextLoader.java INFO Root WebApplicationContext: initialization completed in 2895 ms
+2019-07-04 09:15:19 FrameworkServlet.java INFO FrameworkServlet 'HttpServer': initialization started
+2019-07-04 09:15:19 AbstractApplicationContext.java INFO Refreshing WebApplicationContext for namespace 'HttpServer-servlet': startup date [Thu Jul 04 09:15:19 CST 2019]; parent: Root WebApplicationContext
+2019-07-04 09:15:19 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from URL [file:/D:/data/idea/java/private/github-self-workspace/dubbo-demo/DubboConsumer/target/classes/httpServer-servlet.xml]
+2019-07-04 09:15:19 FrameworkServlet.java INFO FrameworkServlet 'HttpServer': initialization completed in 19 ms
+2019-07-04 09:17:14 DefaultHandlerExceptionResolver.java WARN Request method 'GET' not supported
+2019-07-04 09:17:17 DefaultHandlerExceptionResolver.java WARN Request method 'GET' not supported
+2019-07-04 09:18:07 DefaultHandlerExceptionResolver.java WARN Request method 'GET' not supported
+2019-07-04 09:45:14 ContextLoader.java INFO Root WebApplicationContext: initialization started
+2019-07-04 09:45:15 AbstractApplicationContext.java INFO Refreshing Root WebApplicationContext: startup date [Thu Jul 04 09:45:15 CST 2019]; root of context hierarchy
+2019-07-04 09:45:15 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [app-context.xml]
+2019-07-04 09:45:16 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [dubbo-consumer.xml]
+2019-07-04 09:45:16 ? INFO using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2019-07-04 09:45:16 AutowiredAnnotationBeanPostProcessor.java INFO JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-04 09:45:16 AbstractRegistry.java INFO  [DUBBO] Load registry store file C:\Users\吴彰涛\.dubbo\dubbo-registry-192.168.1.100.cache, data: {com.ztwu.dubbo.service.IUserService=empty://192.168.1.1:20880/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&category=configurators&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=9688&retries=0&side=provider&timeout=120000&timestamp=1562204703165, com.ztwu.dubbo.service.IProviderService=empty://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&category=configurators&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=9688&retries=0&side=provider&timeout=120000&timestamp=1562204702459}, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-07-04 09:45:16 ZkEventThread.java INFO Starting ZkClient event thread.
+2019-07-04 09:45:16 Environment.java INFO Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+2019-07-04 09:45:16 Environment.java INFO Client environment:host.name=DESKTOP-99JO1SO
+2019-07-04 09:45:16 Environment.java INFO Client environment:java.version=1.8.0_191
+2019-07-04 09:45:16 Environment.java INFO Client environment:java.vendor=Oracle Corporation
+2019-07-04 09:45:16 Environment.java INFO Client environment:java.home=D:\soft\jdk\jre
+2019-07-04 09:45:16 Environment.java INFO Client environment:java.class.path=D:\soft\packagetool\maven\apache-maven-3.5.4\boot\plexus-classworlds-2.5.2.jar;D:\soft\programmetool\idea\IntelliJ IDEA 2018.2.5\lib\idea_rt.jar
+2019-07-04 09:45:16 Environment.java INFO Client environment:java.library.path=D:\soft\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\soft\jdk9\bin;D:\soft\packagetool\maven\apache-maven-3.5.4\bin;D:\soft\scala\bin;D:\soft\scala\bin;D:\soft\vcs\git\Git\cmd;D:\soft\vcs\svn\bin;D:\soft\python\python2;D:\soft\python\python3;D:\soft\python\python2\Scripts;D:\soft\python\python3\Scripts;D:\soft\packagetool\sbt2\bin;D:\soft\hadoop\hadoop-2.7.7\bin;D:\soft\packagetool\ant\apache-ant-1.10.5\bin;D:\soft\cmake\bin;D:\soft\zlib\zlib-1.2.8;D:\soft\packagetool\gradle\gradle-4.5-all\bin;D:\soft\thrift;D:\soft\mingw64\mingw64\bin;D:\soft\hadoop\hadoop-2.7.7\sbin;C:\Users\吴彰涛\AppData\Local\Microsoft\WindowsApps;;.
+2019-07-04 09:45:16 Environment.java INFO Client environment:java.io.tmpdir=C:\Users\吴彰涛\AppData\Local\Temp\
+2019-07-04 09:45:16 Environment.java INFO Client environment:java.compiler=<NA>
+2019-07-04 09:45:16 Environment.java INFO Client environment:os.name=Windows 10
+2019-07-04 09:45:16 Environment.java INFO Client environment:os.arch=amd64
+2019-07-04 09:45:16 Environment.java INFO Client environment:os.version=10.0
+2019-07-04 09:45:16 Environment.java INFO Client environment:user.name=吴彰涛
+2019-07-04 09:45:16 Environment.java INFO Client environment:user.home=C:\Users\吴彰涛
+2019-07-04 09:45:16 Environment.java INFO Client environment:user.dir=D:\data\idea\java\private\github-self-workspace\dubbo-demo\DubboConsumer
+2019-07-04 09:45:16 ZooKeeper.java INFO Initiating client connection, connectString=192.168.1.100:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@67b5da40
+2019-07-04 09:45:16 ClientCnxn.java INFO Opening socket connection to server /192.168.1.100:2181
+2019-07-04 09:45:16 ClientCnxn.java INFO Socket connection established to ubuntu2/192.168.1.100:2181, initiating session
+2019-07-04 09:45:16 ClientCnxn.java INFO Session establishment complete on server ubuntu2/192.168.1.100:2181, sessionid = 0x26bba8028420007, negotiated timeout = 30000
+2019-07-04 09:45:16 ZkClient.java INFO zookeeper state changed (SyncConnected)
+2019-07-04 09:45:16 AbstractRegistry.java INFO  [DUBBO] Register: consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=consumers&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716531, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:45:16 AbstractRegistry.java INFO  [DUBBO] Subscribe: consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716531, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:45:16 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716531, urls: [dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=9688&retries=0&side=provider&timeout=120000&timestamp=1562204702459, empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=configurators&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716531, empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716531], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:45:16 AbstractClient.java INFO  [DUBBO] Successed connect to server /192.168.1.1:20880 from NettyClient 192.168.1.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x2100d881, /192.168.1.1:52183 => /192.168.1.1:20880]], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:45:16 AbstractClient.java INFO  [DUBBO] Start NettyClient DESKTOP-99JO1SO/192.168.1.1 connect to the server /192.168.1.1:20880, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:45:16 ReferenceConfig.java INFO  [DUBBO] Refer dubbo service com.ztwu.dubbo.service.IProviderService from url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=dubboConsumer&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716531, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:45:16 AbstractRegistry.java INFO  [DUBBO] Register: consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=consumers&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716925, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:45:16 AbstractRegistry.java INFO  [DUBBO] Subscribe: consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716925, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:45:16 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716925, urls: [dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=9688&retries=0&side=provider&timeout=120000&timestamp=1562204703165, empty://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=configurators&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716925, empty://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716925], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:45:16 ReferenceConfig.java INFO  [DUBBO] Refer dubbo service com.ztwu.dubbo.service.IUserService from url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=dubboConsumer&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=6520&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562204716925, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:45:17 AbstractHandlerMethodMapping.java INFO Mapped "{[/api],methods=[POST],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.ztwu.dubbo.controller.HelloApi.boy(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-04 09:45:17 RequestMappingHandlerAdapter.java INFO Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Jul 04 09:45:15 CST 2019]; root of context hierarchy
+2019-07-04 09:45:17 RequestMappingHandlerAdapter.java INFO Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Jul 04 09:45:15 CST 2019]; root of context hierarchy
+2019-07-04 09:45:17 AbstractUrlHandlerMapping.java INFO Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2019-07-04 09:45:17 ContextLoader.java INFO Root WebApplicationContext: initialization completed in 2391 ms
+2019-07-04 09:45:17 FrameworkServlet.java INFO FrameworkServlet 'HttpServer': initialization started
+2019-07-04 09:45:17 AbstractApplicationContext.java INFO Refreshing WebApplicationContext for namespace 'HttpServer-servlet': startup date [Thu Jul 04 09:45:17 CST 2019]; parent: Root WebApplicationContext
+2019-07-04 09:45:17 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from URL [file:/D:/data/idea/java/private/github-self-workspace/dubbo-demo/DubboConsumer/target/classes/httpServer-servlet.xml]
+2019-07-04 09:45:17 FrameworkServlet.java INFO FrameworkServlet 'HttpServer': initialization completed in 15 ms
+2019-07-04 09:57:50 ContextLoader.java INFO Root WebApplicationContext: initialization started
+2019-07-04 09:57:50 AbstractApplicationContext.java INFO Refreshing Root WebApplicationContext: startup date [Thu Jul 04 09:57:50 CST 2019]; root of context hierarchy
+2019-07-04 09:57:50 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [app-context.xml]
+2019-07-04 09:57:51 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [dubbo-consumer.xml]
+2019-07-04 09:57:51 ? INFO using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2019-07-04 09:57:51 AutowiredAnnotationBeanPostProcessor.java INFO JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-04 09:57:52 AbstractRegistry.java INFO  [DUBBO] Load registry store file C:\Users\吴彰涛\.dubbo\dubbo-registry-192.168.1.100.cache, data: {com.ztwu.dubbo.service.IUserService=empty://192.168.1.1:20880/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&category=configurators&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=10856&retries=0&side=provider&timeout=120000&timestamp=1562205461198, com.ztwu.dubbo.service.IProviderService=empty://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&category=configurators&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=10856&retries=0&side=provider&timeout=120000&timestamp=1562205460292}, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-07-04 09:57:52 ZkEventThread.java INFO Starting ZkClient event thread.
+2019-07-04 09:57:52 Environment.java INFO Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+2019-07-04 09:57:52 Environment.java INFO Client environment:host.name=DESKTOP-99JO1SO
+2019-07-04 09:57:52 Environment.java INFO Client environment:java.version=1.8.0_191
+2019-07-04 09:57:52 Environment.java INFO Client environment:java.vendor=Oracle Corporation
+2019-07-04 09:57:52 Environment.java INFO Client environment:java.home=D:\soft\jdk\jre
+2019-07-04 09:57:52 Environment.java INFO Client environment:java.class.path=D:\soft\packagetool\maven\apache-maven-3.5.4\boot\plexus-classworlds-2.5.2.jar;D:\soft\programmetool\idea\IntelliJ IDEA 2018.2.5\lib\idea_rt.jar
+2019-07-04 09:57:52 Environment.java INFO Client environment:java.library.path=D:\soft\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\soft\jdk9\bin;D:\soft\packagetool\maven\apache-maven-3.5.4\bin;D:\soft\scala\bin;D:\soft\scala\bin;D:\soft\vcs\git\Git\cmd;D:\soft\vcs\svn\bin;D:\soft\python\python2;D:\soft\python\python3;D:\soft\python\python2\Scripts;D:\soft\python\python3\Scripts;D:\soft\packagetool\sbt2\bin;D:\soft\hadoop\hadoop-2.7.7\bin;D:\soft\packagetool\ant\apache-ant-1.10.5\bin;D:\soft\cmake\bin;D:\soft\zlib\zlib-1.2.8;D:\soft\packagetool\gradle\gradle-4.5-all\bin;D:\soft\thrift;D:\soft\mingw64\mingw64\bin;D:\soft\hadoop\hadoop-2.7.7\sbin;C:\Users\吴彰涛\AppData\Local\Microsoft\WindowsApps;;.
+2019-07-04 09:57:52 Environment.java INFO Client environment:java.io.tmpdir=C:\Users\吴彰涛\AppData\Local\Temp\
+2019-07-04 09:57:52 Environment.java INFO Client environment:java.compiler=<NA>
+2019-07-04 09:57:52 Environment.java INFO Client environment:os.name=Windows 10
+2019-07-04 09:57:52 Environment.java INFO Client environment:os.arch=amd64
+2019-07-04 09:57:52 Environment.java INFO Client environment:os.version=10.0
+2019-07-04 09:57:52 Environment.java INFO Client environment:user.name=吴彰涛
+2019-07-04 09:57:52 Environment.java INFO Client environment:user.home=C:\Users\吴彰涛
+2019-07-04 09:57:52 Environment.java INFO Client environment:user.dir=D:\data\idea\java\private\github-self-workspace\dubbo-demo\DubboConsumer
+2019-07-04 09:57:52 ZooKeeper.java INFO Initiating client connection, connectString=192.168.1.100:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@2b08f55a
+2019-07-04 09:57:52 ClientCnxn.java INFO Opening socket connection to server /192.168.1.100:2181
+2019-07-04 09:57:52 ClientCnxn.java INFO Socket connection established to ubuntu2/192.168.1.100:2181, initiating session
+2019-07-04 09:57:52 ClientCnxn.java INFO Session establishment complete on server ubuntu2/192.168.1.100:2181, sessionid = 0x26bba8028420009, negotiated timeout = 30000
+2019-07-04 09:57:52 ZkClient.java INFO zookeeper state changed (SyncConnected)
+2019-07-04 09:57:52 AbstractRegistry.java INFO  [DUBBO] Register: consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=consumers&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472112, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:57:52 AbstractRegistry.java INFO  [DUBBO] Subscribe: consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472112, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:57:52 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472112, urls: [dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=10856&retries=0&side=provider&timeout=120000&timestamp=1562205460292, empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=configurators&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472112, empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472112], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:57:52 AbstractClient.java INFO  [DUBBO] Successed connect to server /192.168.1.1:20880 from NettyClient 192.168.1.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x4aa4bfa1, /192.168.1.1:52749 => /192.168.1.1:20880]], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:57:52 AbstractClient.java INFO  [DUBBO] Start NettyClient DESKTOP-99JO1SO/192.168.1.1 connect to the server /192.168.1.1:20880, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:57:52 ReferenceConfig.java INFO  [DUBBO] Refer dubbo service com.ztwu.dubbo.service.IProviderService from url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=dubboConsumer&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472112, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:57:52 AbstractRegistry.java INFO  [DUBBO] Register: consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=consumers&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472508, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:57:52 AbstractRegistry.java INFO  [DUBBO] Subscribe: consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472508, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:57:52 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472508, urls: [dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=10856&retries=0&side=provider&timeout=120000&timestamp=1562205461198, empty://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=configurators&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472508, empty://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472508], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:57:52 ReferenceConfig.java INFO  [DUBBO] Refer dubbo service com.ztwu.dubbo.service.IUserService from url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=dubboConsumer&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=15676&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562205472508, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 09:57:52 AbstractHandlerMethodMapping.java INFO Mapped "{[/api],methods=[POST],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.ztwu.dubbo.controller.HelloApi.boy(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-04 09:57:52 RequestMappingHandlerAdapter.java INFO Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Jul 04 09:57:50 CST 2019]; root of context hierarchy
+2019-07-04 09:57:52 RequestMappingHandlerAdapter.java INFO Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Jul 04 09:57:50 CST 2019]; root of context hierarchy
+2019-07-04 09:57:52 AbstractUrlHandlerMapping.java INFO Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2019-07-04 09:57:52 ContextLoader.java INFO Root WebApplicationContext: initialization completed in 2404 ms
+2019-07-04 09:57:53 FrameworkServlet.java INFO FrameworkServlet 'HttpServer': initialization started
+2019-07-04 09:57:53 AbstractApplicationContext.java INFO Refreshing WebApplicationContext for namespace 'HttpServer-servlet': startup date [Thu Jul 04 09:57:53 CST 2019]; parent: Root WebApplicationContext
+2019-07-04 09:57:53 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from URL [file:/D:/data/idea/java/private/github-self-workspace/dubbo-demo/DubboConsumer/target/classes/httpServer-servlet.xml]
+2019-07-04 09:57:53 FrameworkServlet.java INFO FrameworkServlet 'HttpServer': initialization completed in 20 ms
+2019-07-04 10:21:05 ContextLoader.java INFO Root WebApplicationContext: initialization started
+2019-07-04 10:21:05 AbstractApplicationContext.java INFO Refreshing Root WebApplicationContext: startup date [Thu Jul 04 10:21:05 CST 2019]; root of context hierarchy
+2019-07-04 10:21:05 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [app-context.xml]
+2019-07-04 10:21:06 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from class path resource [dubbo-consumer.xml]
+2019-07-04 10:21:06 ? INFO using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2019-07-04 10:21:07 AutowiredAnnotationBeanPostProcessor.java INFO JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-04 10:21:07 AbstractRegistry.java INFO  [DUBBO] Load registry store file C:\Users\吴彰涛\.dubbo\dubbo-registry-192.168.1.100.cache, data: {com.ztwu.dubbo.service.IUserService=empty://192.168.1.1:20880/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&category=configurators&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=3860&retries=0&side=provider&timeout=120000&timestamp=1562206858237, com.ztwu.dubbo.service.IProviderService=empty://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&category=configurators&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=3860&retries=0&side=provider&timeout=120000&timestamp=1562206857470}, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-07-04 10:21:07 ZkEventThread.java INFO Starting ZkClient event thread.
+2019-07-04 10:21:07 Environment.java INFO Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+2019-07-04 10:21:07 Environment.java INFO Client environment:host.name=DESKTOP-99JO1SO
+2019-07-04 10:21:07 Environment.java INFO Client environment:java.version=1.8.0_191
+2019-07-04 10:21:07 Environment.java INFO Client environment:java.vendor=Oracle Corporation
+2019-07-04 10:21:07 Environment.java INFO Client environment:java.home=D:\soft\jdk\jre
+2019-07-04 10:21:07 Environment.java INFO Client environment:java.class.path=D:\soft\packagetool\maven\apache-maven-3.5.4\boot\plexus-classworlds-2.5.2.jar;D:\soft\programmetool\idea\IntelliJ IDEA 2018.2.5\lib\idea_rt.jar
+2019-07-04 10:21:07 Environment.java INFO Client environment:java.library.path=D:\soft\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\soft\jdk9\bin;D:\soft\packagetool\maven\apache-maven-3.5.4\bin;D:\soft\scala\bin;D:\soft\scala\bin;D:\soft\vcs\git\Git\cmd;D:\soft\vcs\svn\bin;D:\soft\python\python2;D:\soft\python\python3;D:\soft\python\python2\Scripts;D:\soft\python\python3\Scripts;D:\soft\packagetool\sbt2\bin;D:\soft\hadoop\hadoop-2.7.7\bin;D:\soft\packagetool\ant\apache-ant-1.10.5\bin;D:\soft\cmake\bin;D:\soft\zlib\zlib-1.2.8;D:\soft\packagetool\gradle\gradle-4.5-all\bin;D:\soft\thrift;D:\soft\mingw64\mingw64\bin;D:\soft\hadoop\hadoop-2.7.7\sbin;C:\Users\吴彰涛\AppData\Local\Microsoft\WindowsApps;;.
+2019-07-04 10:21:07 Environment.java INFO Client environment:java.io.tmpdir=C:\Users\吴彰涛\AppData\Local\Temp\
+2019-07-04 10:21:07 Environment.java INFO Client environment:java.compiler=<NA>
+2019-07-04 10:21:07 Environment.java INFO Client environment:os.name=Windows 10
+2019-07-04 10:21:07 Environment.java INFO Client environment:os.arch=amd64
+2019-07-04 10:21:07 Environment.java INFO Client environment:os.version=10.0
+2019-07-04 10:21:07 Environment.java INFO Client environment:user.name=吴彰涛
+2019-07-04 10:21:07 Environment.java INFO Client environment:user.home=C:\Users\吴彰涛
+2019-07-04 10:21:07 Environment.java INFO Client environment:user.dir=D:\data\idea\java\private\github-self-workspace\dubbo-demo\DubboConsumer
+2019-07-04 10:21:07 ZooKeeper.java INFO Initiating client connection, connectString=192.168.1.100:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@2b08f55a
+2019-07-04 10:21:07 ClientCnxn.java INFO Opening socket connection to server /192.168.1.100:2181
+2019-07-04 10:21:07 ClientCnxn.java INFO Socket connection established to ubuntu2/192.168.1.100:2181, initiating session
+2019-07-04 10:21:07 ClientCnxn.java INFO Session establishment complete on server ubuntu2/192.168.1.100:2181, sessionid = 0x26bba802842000b, negotiated timeout = 30000
+2019-07-04 10:21:07 ZkClient.java INFO zookeeper state changed (SyncConnected)
+2019-07-04 10:21:07 AbstractRegistry.java INFO  [DUBBO] Register: consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=consumers&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867376, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:07 AbstractRegistry.java INFO  [DUBBO] Subscribe: consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867376, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:07 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867376, urls: [dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=3860&retries=0&side=provider&timeout=120000&timestamp=1562206857470, empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=configurators&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867376, empty://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867376], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:07 AbstractClient.java INFO  [DUBBO] Successed connect to server /192.168.1.1:20880 from NettyClient 192.168.1.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x4aa4bfa1, /192.168.1.1:54437 => /192.168.1.1:20880]], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:07 AbstractClient.java INFO  [DUBBO] Start NettyClient DESKTOP-99JO1SO/192.168.1.1 connect to the server /192.168.1.1:20880, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:07 ReferenceConfig.java INFO  [DUBBO] Refer dubbo service com.ztwu.dubbo.service.IProviderService from url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=dubboConsumer&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867376, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:07 AbstractRegistry.java INFO  [DUBBO] Register: consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=consumers&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867817, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:07 AbstractRegistry.java INFO  [DUBBO] Subscribe: consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867817, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:07 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867817, urls: [dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=3860&retries=0&side=provider&timeout=120000&timestamp=1562206858237, empty://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=configurators&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867817, empty://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867817], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:07 ReferenceConfig.java INFO  [DUBBO] Refer dubbo service com.ztwu.dubbo.service.IUserService from url zookeeper://192.168.1.100:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=dubboConsumer&check=false&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867817, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:07 AbstractHandlerMethodMapping.java INFO Mapped "{[/api],methods=[POST],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.ztwu.dubbo.controller.HelloApi.boy(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-04 10:21:08 RequestMappingHandlerAdapter.java INFO Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Jul 04 10:21:05 CST 2019]; root of context hierarchy
+2019-07-04 10:21:08 RequestMappingHandlerAdapter.java INFO Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Jul 04 10:21:05 CST 2019]; root of context hierarchy
+2019-07-04 10:21:08 AbstractUrlHandlerMapping.java INFO Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2019-07-04 10:21:08 ContextLoader.java INFO Root WebApplicationContext: initialization completed in 2432 ms
+2019-07-04 10:21:08 FrameworkServlet.java INFO FrameworkServlet 'HttpServer': initialization started
+2019-07-04 10:21:08 AbstractApplicationContext.java INFO Refreshing WebApplicationContext for namespace 'HttpServer-servlet': startup date [Thu Jul 04 10:21:08 CST 2019]; parent: Root WebApplicationContext
+2019-07-04 10:21:08 XmlBeanDefinitionReader.java INFO Loading XML bean definitions from URL [file:/D:/data/idea/java/private/github-self-workspace/dubbo-demo/DubboConsumer/target/classes/httpServer-servlet.xml]
+2019-07-04 10:21:08 FrameworkServlet.java INFO FrameworkServlet 'HttpServer': initialization completed in 24 ms
+2019-07-04 10:21:18 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867376, urls: [rest://192.168.1.1:8888/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.8.4&generic=false&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=15208&retries=0&server=tomcat&side=provider&timeout=120000&timestamp=1562206877234, dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=3860&retries=0&side=provider&timeout=120000&timestamp=1562206857470], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:21:18 RegistryDirectory.java ERROR Unsupported protocol rest in notified url: rest://192.168.1.1:8888/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.8.4&generic=false&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=15208&retries=0&server=tomcat&side=provider&timeout=120000&timestamp=1562206877234 from registry 192.168.1.100:2181 to consumer 192.168.1.1, supported protocol: [dubbo, injvm, mock, redis, registry, rmi, thrift]
+java.lang.IllegalStateException: Unsupported protocol rest in notified url: rest://192.168.1.1:8888/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.8.4&generic=false&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=15208&retries=0&server=tomcat&side=provider&timeout=120000&timestamp=1562206877234 from registry 192.168.1.100:2181 to consumer 192.168.1.1, supported protocol: [dubbo, injvm, mock, redis, registry, rmi, thrift]
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.toInvokers(RegistryDirectory.java:372)
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.refreshInvoker(RegistryDirectory.java:224)
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.notify(RegistryDirectory.java:195)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:449)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.doNotify(FailbackRegistry.java:273)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.notify(FailbackRegistry.java:259)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.access$400(ZookeeperRegistry.java:45)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry$3.childChanged(ZookeeperRegistry.java:159)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient$2.handleChildChange(ZkclientZookeeperClient.java:82)
+	at org.I0Itec.zkclient.ZkClient$7.run(ZkClient.java:568)
+	at org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:71)
+2019-07-04 10:21:18 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867376, urls: [dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=3860&retries=0&side=provider&timeout=120000&timestamp=1562206857470], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:23:15 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IProviderService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867376, urls: [rest://192.168.1.1:8888/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.8.4&generic=false&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16240&retries=0&server=tomcat&side=provider&timeout=120000&timestamp=1562206994007, dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=3860&retries=0&side=provider&timeout=120000&timestamp=1562206857470], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:23:15 RegistryDirectory.java ERROR Unsupported protocol rest in notified url: rest://192.168.1.1:8888/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.8.4&generic=false&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16240&retries=0&server=tomcat&side=provider&timeout=120000&timestamp=1562206994007 from registry 192.168.1.100:2181 to consumer 192.168.1.1, supported protocol: [dubbo, injvm, mock, redis, registry, rmi, thrift]
+java.lang.IllegalStateException: Unsupported protocol rest in notified url: rest://192.168.1.1:8888/com.ztwu.dubbo.service.IProviderService?anyhost=true&application=dubboProvider&dubbo=2.8.4&generic=false&interface=com.ztwu.dubbo.service.IProviderService&methods=helloGirl,helloBoy&pid=16240&retries=0&server=tomcat&side=provider&timeout=120000&timestamp=1562206994007 from registry 192.168.1.100:2181 to consumer 192.168.1.1, supported protocol: [dubbo, injvm, mock, redis, registry, rmi, thrift]
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.toInvokers(RegistryDirectory.java:372)
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.refreshInvoker(RegistryDirectory.java:224)
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.notify(RegistryDirectory.java:195)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:449)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.doNotify(FailbackRegistry.java:273)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.notify(FailbackRegistry.java:259)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.access$400(ZookeeperRegistry.java:45)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry$3.childChanged(ZookeeperRegistry.java:159)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient$2.handleChildChange(ZkclientZookeeperClient.java:82)
+	at org.I0Itec.zkclient.ZkClient$7.run(ZkClient.java:568)
+	at org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:71)
+2019-07-04 10:23:15 AbstractRegistry.java INFO  [DUBBO] Notify urls for subscribe url consumer://192.168.1.1/com.ztwu.dubbo.service.IUserService?application=dubboConsumer&category=providers,configurators,routers&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16296&retries=0&revision=1.0-SNAPSHOT&side=consumer&timeout=120000&timestamp=1562206867817, urls: [dubbo://192.168.1.1:20880/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&dubbo=2.5.3&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=3860&retries=0&side=provider&timeout=120000&timestamp=1562206858237, rest://192.168.1.1:8888/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&dubbo=2.8.4&generic=false&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16240&retries=0&server=tomcat&side=provider&timeout=120000&timestamp=1562206995306], dubbo version: 2.5.3, current host: 192.168.1.1
+2019-07-04 10:23:15 RegistryDirectory.java ERROR Unsupported protocol rest in notified url: rest://192.168.1.1:8888/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&dubbo=2.8.4&generic=false&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16240&retries=0&server=tomcat&side=provider&timeout=120000&timestamp=1562206995306 from registry 192.168.1.100:2181 to consumer 192.168.1.1, supported protocol: [dubbo, injvm, mock, redis, registry, rmi, thrift]
+java.lang.IllegalStateException: Unsupported protocol rest in notified url: rest://192.168.1.1:8888/com.ztwu.dubbo.service.IUserService?anyhost=true&application=dubboProvider&dubbo=2.8.4&generic=false&interface=com.ztwu.dubbo.service.IUserService&methods=update,insert,selectByID,delete&pid=16240&retries=0&server=tomcat&side=provider&timeout=120000&timestamp=1562206995306 from registry 192.168.1.100:2181 to consumer 192.168.1.1, supported protocol: [dubbo, injvm, mock, redis, registry, rmi, thrift]
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.toInvokers(RegistryDirectory.java:372)
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.refreshInvoker(RegistryDirectory.java:224)
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.notify(RegistryDirectory.java:195)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:449)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.doNotify(FailbackRegistry.java:273)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.notify(FailbackRegistry.java:259)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.access$400(ZookeeperRegistry.java:45)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry$3.childChanged(ZookeeperRegistry.java:159)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient$2.handleChildChange(ZkclientZookeeperClient.java:82)
+	at org.I0Itec.zkclient.ZkClient$7.run(ZkClient.java:568)
+	at org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:71)
